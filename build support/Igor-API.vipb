@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2020-03-17 13:58:45" Modified_Date="2023-09-05 18:47:52" Creator="Patrick Irvin" Comments="" ID="f39574e3fd08a59d5a748de584460dc2">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2020-03-17 13:58:45" Modified_Date="2025-03-28 09:50:52" Creator="Patrick Irvin" Comments="" ID="e2946575a053410ec05fb90ec31aac9c">
   <Library_General_Settings>
     <Package_File_Name>Levylab_lib_Igor_API</Package_File_Name>
-    <Library_Version>1.0.1.3</Library_Version>
+    <Library_Version>1.0.2.4</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\lvsrc</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -17,21 +17,9 @@
   </Library_General_Settings>
   <Advanced_Settings>
     <Package_Dependencies>
-      <External_Dependencies>jki_lib_caraya &gt;= 1.4.2.144</External_Dependencies>
-      <External_Dependencies>labview_open_source_lib_epoch_datetime &gt;= 1.2.0.6</External_Dependencies>
-      <External_Dependencies>oglib_array &gt;= 4.1.1.14</External_Dependencies>
       <External_Dependencies>oglib_error &gt;= 4.2.0.23</External_Dependencies>
-      <External_Dependencies>oglib_file &gt;= 4.0.1.22</External_Dependencies>
-      <External_Dependencies>oglib_lvdata &gt;= 5.0.0.27</External_Dependencies>
-      <External_Dependencies>oglib_string &gt;= 5.0.0.25</External_Dependencies>
       <External_Dependencies>oglib_time &gt;= 4.0.1.3</External_Dependencies>
-      <Direct_Dependencies>jki_lib_caraya-1.4.2.144</Direct_Dependencies>
-      <Direct_Dependencies>labview_open_source_lib_epoch_datetime-1.2.0.6</Direct_Dependencies>
-      <Direct_Dependencies>oglib_array-4.1.1.14</Direct_Dependencies>
       <Direct_Dependencies>oglib_error-4.2.0.23</Direct_Dependencies>
-      <Direct_Dependencies>oglib_file-4.0.1.22</Direct_Dependencies>
-      <Direct_Dependencies>oglib_lvdata-5.0.0.27</Direct_Dependencies>
-      <Direct_Dependencies>oglib_string-5.0.0.25</Direct_Dependencies>
       <Direct_Dependencies>oglib_time-4.0.1.3</Direct_Dependencies>
     </Package_Dependencies>
     <Custom_Action_VIs>
@@ -45,12 +33,12 @@
     <VI_Package_Configuration_File>Igor-API.vipc</VI_Package_Configuration_File>
     <Description>
       <One_Line_Description_Summary>LabVIEW wrapper to control Igor Pro with ActiveX</One_Line_Description_Summary>
-      <Description>LabVIEW wrapper meant to facilitate the use of the text-based Igor Pro ActiveX API.</Description>
+      <Description>LabVIEW wrapper to facilitate the use of the text-based Igor Pro ActiveX API.</Description>
       <Copyright/>
       <Packager>Patrick Irvin, Joe Albro</Packager>
       <URL/>
-      <Release_Notes>[1.0.1.2]
-- Fix Issue #1: namespace for loading waves via file</Release_Notes>
+      <Release_Notes>[1.0.2.3]
+- project organization to reduce package depeendencies (move tests into own project)</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -129,6 +117,12 @@
         <Namespace_Type>Prefix</Namespace_Type>
         <Namespace/>
       </Namespace_Overrides>
+      <Exclusions>
+        <Path>Tests</Path>
+      </Exclusions>
+      <Exclusions>
+        <Path>Igor_API.lvproj</Path>
+      </Exclusions>
     </Source_Files>
     <License_Agreement_Filepath>..\LICENSE</License_Agreement_Filepath>
     <Licensing_and_Activation>
@@ -327,7 +321,7 @@
         <Path>..\lvsrc\API\Igor_ArraytoIgorWave.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>14FE6FD9D5EF22950CD815A085C20DCA</GUID>
+      <GUID>C134EA80426A52FD1C49CD2FDD5F1392</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
